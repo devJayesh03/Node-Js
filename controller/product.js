@@ -3,7 +3,8 @@ const fs = require('fs');
 const UserModel = require('../model/product')
 const User = UserModel.Product
 
-const data = JSON.parse(fs.readFileSync('json.json'), 'utf-8');
+const path = require("path")
+const data = JSON.parse(fs.readFileSync(path.resolve(__dirname,'json.json')), 'utf-8');
 let products = data.product;
 const nodemailer = require("nodemailer");
 
